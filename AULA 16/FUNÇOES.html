@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Funções (Aulas 16, 17 e 18)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.9">
+</head>
+<body>
+<!--               Exemplo de função:
+         function Mensagem(){
+		      alert("Parabéns!");
+				 }
+			  Mensagem();
+				   
+				   Parâmetros na função:
+         function Mensagem(nome, sobrenome){
+		      alert("Parabéns, " + nome + " " + sobrenome));
+			  }
+			  var a = prompt("Digite seu nome na caixa abaixo:");
+			  var b = prompt("Digite seu sobrenome na caixa abaixo:");
+			  Mensagem(a, b);
+				   
+				   Retornando um valor com Função:			  
+ -->
+<div>
+<script>
+     var V = prompt("Entre com o valor da tensão");
+	 var R = prompt("Entre com o valor da ressistência");
+	 
+	 function calcular (V,R){
+	 var I = V / R;
+	 return I;
+	 }
+	 var corrente = calcular(V,R);
+	 document.write("O Valor da corrente é ", corrente,"A");
+</script>
+</div>
+</body>
+</html>

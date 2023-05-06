@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Objeto Date(Aulas: 21, 22 e 23)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.9">
+</head>
+<body>
+<!-- 
+var hoje = new Date(); //Data e hora atuais
+var novadata = new Date(2023,01,06); //Atribuindo data
+var milissegundos = new Date(1488569383588);
+var dataDeString = new Date("2023/01/06");
+// invocando o objeto Date como uma função (sem operador new);
+document.write("Data: ",Date(), "<br/>");
+document.write("Data em milissegundos: ",Date.now(), "<br/><br/>");
+
+
+
+-->
+
+<script>
+//Array com os nomes dos meses do ano:
+var mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+var semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado", "Domingo"];
+
+var hoje = new Date(); //Data e hora atuais
+
+//Exibindo os valores iniciais de data e hora no navegador:
+document.write("Exibindo os valores iniciais de data e hora no navegador: </br>");
+document.write("Dia do mês: ", hoje.getDate(), "<br/>");
+document.write("Mês: ", mes[hoje.getMonth()], "<br/>");
+document.write("Ano: ", hoje.getFullYear(), "<br/>");
+document.write("Dia da semana: ", semana[hoje.getDay()], "<br/>");
+document.write("Hora: ", hoje.getHours(), "<br/>");
+document.write("Minutos: ", hoje.getMinutes(), "<br/>");
+document.write("Segundos: ", hoje.getSeconds(), "<br/>");
+
+//Função que permite alterar data e hora:
+function alteraData() {
+         hoje.setDate(document.getElementById("dia").value);
+		 hoje.setMonth(document.getElementById("mes").value - 1);
+		 hoje.setFullYear(document.getElementById("ano").value);
+		 alert("Data: " + semana[hoje.getDay()] + ", " + hoje.getDate() + " de " + mes[hoje.getMonth()] + " de " + hoje.getFullYear());
+		 }
+</script>
+<form name="Datas">
+<p>Preencha os campos a seguir para alterar a data e clique no botão "Alterar Data"</p>
+<label>Dia:</label>
+<input type="text" name="dia" id="dia" size=4 placeholder="Dia"/><br/>
+<label>Mês:</label>
+<select name="mes" id="mes">
+        <option value="1">Janeiro</option>
+		<option value="2">Fevereiro</option>
+		<option value="3">Março</option>
+		<option value="4">Abril</option>
+		<option value="5">Maio</option>
+		<option value="6">Junho</option>
+		<option value="7">Julho</option>
+		<option value="8">Agosto</option>
+		<option value="9">Setembro</option>
+		<option value="10">Outubro</option>
+		<option value="11">Novembro</option>
+		<option value="12">Dezembro</option>
+</select>
+<label>Ano:</label>
+<input type="text" name="ano" id="ano" size=4 placeholder="Ano"/><br/>
+<button name="alterarData" type="button" onclick="alteraData();">Alterar Data</button><br/>
+</form>
+		
+</body>
+</html>

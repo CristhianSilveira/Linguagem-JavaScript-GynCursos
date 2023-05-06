@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>ARRAYS (Grande demais)(Aulas 13,14 e 15)</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var Sudeste = ["SP", "RJ", "ES", "MG"];
+var Nordeste = ["PI", "MA", "CE", "RN", "PB", "PE", "SE", "AL", "BA"];
+var Norte = ["AC", "AM", "AP", "RO", "RR", "PA", "TO"];
+var Sul = ["PR", "SC", "RS"];
+var CentroOeste = ["MS", "MT", "GO", "DF"];
+
+var Estados = Nordeste.concat(Sudeste,Norte,Sul,CentroOeste);
+
+document.write("<br/>Listando os estados:<br/><br/>")
+
+Estados.sort();
+for (i=0; i<Estados.length; i++){
+document.write(Estados[i] + "<br/>");
+}
+</script>
+</body>
+</html>

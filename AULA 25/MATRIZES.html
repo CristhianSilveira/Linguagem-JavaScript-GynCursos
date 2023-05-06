@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> Matriz </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.9">
+</head>
+<body>
+<script type="text/javascript">
+var LINHAS = prompt("Digite a quantidade de linhas da matriz:");
+var COLUNAS = prompt("Digite a quantidade de colunas da matriz:");
+alert("Criar uma matriz de " + LINHAS + " linhas por " + COLUNAS + " colunas.");
+
+var MATRIZ2 = [];
+    for (var i = 0; i < LINHAS; i++) {
+	     MATRIZ2[i] = [];
+		 for (var j = 0; j < COLUNAS; j++) {
+		      MATRIZ2[i][j] = '';
+		 }
+	}
+	for (var L = 0; L < LINHAS; L++) {
+	     for (var C = 0; C < COLUNAS; C++) {
+		      MATRIZ2[L][C] = prompt("Digite um valor para inserir na matriz:");
+		}
+	}
+	var VALORES2 = '';
+	for (var L = 0; L < LINHAS;  L++) {
+	    for (var C = 0; C < COLUNAS; C++) {
+		      if (C < COLUNAS - 1) {
+			       VALORES2 += MATRIZ2[L][C] + " \t\t";
+			  }
+			  else {
+			  VALORES2 += MATRIZ2[L][C] + "\n";
+			}
+		}
+	}
+		alert("Conteúdo da matriz2:\n" + VALORES2);  
+</script>
+</body>
+</html>
